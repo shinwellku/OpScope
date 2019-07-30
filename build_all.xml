@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project MockDebugAssistant with libraries in sub-folder">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="./dist/mda.jar">
+            <manifest>
+                <attribute name="Main-Class" value="com.shinwell.mda.gui.MdaAppWindow"/>
+                <attribute name="Class-Path" value=". lib/org.eclipse.osgi_3.9.1.v20130814-1242.jar lib/org.eclipse.core.commands_3.6.100.v20130515-1857.jar lib/org.eclipse.equinox.common_3.6.200.v20130402-1505.jar lib/org.eclipse.equinox.registry_3.5.301.v20130717-1549.jar lib/org.eclipse.core.runtime_3.9.0.v20130326-1255.jar lib/org.eclipse.text_3.5.300.v20130515-1451.jar lib/org.eclipse.swt.win32.win32.x86_3.102.1.v20130827-2048.jar lib/org.eclipse.jface_3.9.1.v20130725-1141.jar lib/org.eclipse.jface.text_3.8.101.v20130802-1147.jar lib/org.eclipse.ui.workbench_3.105.1.v20130821-1411.jar lib/com.ibm.icu_50.1.1.v201304230130.jar lib/org.eclipse.ui.forms_3.6.1.v20130822-1117.jar lib/commons-attributes-api.jar lib/commons-attributes-compiler.jar lib/commons-beanutils.jar lib/commons-codec.jar lib/commons-collections.jar lib/commons-lang.jar lib/commons-logging.jar lib/commons-net-2.0.jar lib/jsch-0.1.54.jar lib/log4j-1.2.14.jar lib/sblim-cim-client2-2.2.5-src.zip lib/sblim-cim-client2-2.2.5.jar lib/commons-configuration-1.7.jar lib/swing2swt.jar lib/org.eclipse.jface.databinding.nl1_1.0.0.v200609270227.jar lib/org.eclipse.jface.nl1_3.2.1.v200609270227.jar lib/org.eclipse.jface.text.nl1_3.2.1.v200609270227.jar lib/org.springframework.aop-3.1.1.RELEASE.jar lib/org.springframework.asm-3.1.1.RELEASE.jar lib/org.springframework.aspects-3.1.1.RELEASE.jar lib/org.springframework.beans-3.1.1.RELEASE.jar lib/org.springframework.context-3.1.1.RELEASE.jar lib/org.springframework.context.support-3.1.1.RELEASE.jar lib/org.springframework.core-3.1.1.RELEASE.jar lib/org.springframework.expression-3.1.1.RELEASE.jar lib/org.springframework.instrument-3.1.1.RELEASE.jar lib/org.springframework.instrument.tomcat-3.1.1.RELEASE.jar lib/aopalliance-1.0.jar lib/aspectjweaver-1.6.9.jar lib/cglib-nodep-2.2.jar lib/commons-pool-1.5.3.jar lib/commons-collections-3.2.jar lib/commons-logging-1.1.1.jar lib/log4j-1.2.16.jar"/>
+            </manifest>
+            <fileset dir="D:/myWorkspace/gitWorkspace/MockDebugAssistant/bin"/>
+        </jar>
+        <delete dir="C:/Users/ku/Desktop/lib"/>
+        <mkdir dir="C:/Users/ku/Desktop/lib"/>
+        <copy file="E:/myPrograms/MyEclipse Professional 2014/plugins/org.eclipse.osgi_3.9.1.v20130814-1242.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="E:/myPrograms/MyEclipse Professional 2014/plugins/org.eclipse.core.commands_3.6.100.v20130515-1857.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="E:/myPrograms/MyEclipse Professional 2014/plugins/org.eclipse.equinox.common_3.6.200.v20130402-1505.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="E:/myPrograms/MyEclipse Professional 2014/plugins/org.eclipse.equinox.registry_3.5.301.v20130717-1549.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="E:/myPrograms/MyEclipse Professional 2014/plugins/org.eclipse.core.runtime_3.9.0.v20130326-1255.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="E:/myPrograms/MyEclipse Professional 2014/plugins/org.eclipse.text_3.5.300.v20130515-1451.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="E:/myPrograms/MyEclipse Professional 2014/plugins/org.eclipse.swt.win32.win32.x86_3.102.1.v20130827-2048.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="E:/myPrograms/MyEclipse Professional 2014/plugins/org.eclipse.jface_3.9.1.v20130725-1141.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="E:/myPrograms/MyEclipse Professional 2014/plugins/org.eclipse.jface.text_3.8.101.v20130802-1147.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="E:/myPrograms/MyEclipse Professional 2014/plugins/org.eclipse.ui.workbench_3.105.1.v20130821-1411.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="E:/myPrograms/MyEclipse Professional 2014/plugins/com.ibm.icu_50.1.1.v201304230130.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="E:/myPrograms/MyEclipse Professional 2014/plugins/org.eclipse.ui.forms_3.6.1.v20130822-1117.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="D:/myWorkspace/gitWorkspace/MockDebugAssistant/lib/commons-attributes-api.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="D:/myWorkspace/gitWorkspace/MockDebugAssistant/lib/commons-attributes-compiler.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="D:/myWorkspace/gitWorkspace/MockDebugAssistant/lib/commons-beanutils.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="D:/myWorkspace/gitWorkspace/MockDebugAssistant/lib/commons-codec.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="D:/myWorkspace/gitWorkspace/MockDebugAssistant/lib/commons-collections.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="D:/myWorkspace/gitWorkspace/MockDebugAssistant/lib/commons-lang.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="D:/myWorkspace/gitWorkspace/MockDebugAssistant/lib/commons-logging.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="D:/myWorkspace/gitWorkspace/MockDebugAssistant/lib/commons-net-2.0.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="D:/myWorkspace/gitWorkspace/MockDebugAssistant/lib/jsch-0.1.54.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="D:/myWorkspace/gitWorkspace/MockDebugAssistant/lib/log4j-1.2.14.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="D:/myWorkspace/gitWorkspace/MockDebugAssistant/lib/sblim-cim-client2-2.2.5-src.zip" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="D:/myWorkspace/gitWorkspace/MockDebugAssistant/lib/sblim-cim-client2-2.2.5.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="D:/myWorkspace/gitWorkspace/MockDebugAssistant/lib/commons-configuration-1.7.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="D:/myWorkspace/gitWorkspace/MockDebugAssistant/lib/swing2swt.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="D:/myWorkspace/gitWorkspace/MockDebugAssistant/lib/org.eclipse.jface.databinding.nl1_1.0.0.v200609270227.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="D:/myWorkspace/gitWorkspace/MockDebugAssistant/lib/org.eclipse.jface.nl1_3.2.1.v200609270227.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="D:/myWorkspace/gitWorkspace/MockDebugAssistant/lib/org.eclipse.jface.text.nl1_3.2.1.v200609270227.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="E:/myPrograms/MyEclipse Professional 2014/configuration/org.eclipse.osgi/bundles/106/1/.cp/data/3.1/dist/org.springframework.aop-3.1.1.RELEASE.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="E:/myPrograms/MyEclipse Professional 2014/configuration/org.eclipse.osgi/bundles/106/1/.cp/data/3.1/dist/org.springframework.asm-3.1.1.RELEASE.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="E:/myPrograms/MyEclipse Professional 2014/configuration/org.eclipse.osgi/bundles/106/1/.cp/data/3.1/dist/org.springframework.aspects-3.1.1.RELEASE.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="E:/myPrograms/MyEclipse Professional 2014/configuration/org.eclipse.osgi/bundles/106/1/.cp/data/3.1/dist/org.springframework.beans-3.1.1.RELEASE.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="E:/myPrograms/MyEclipse Professional 2014/configuration/org.eclipse.osgi/bundles/106/1/.cp/data/3.1/dist/org.springframework.context-3.1.1.RELEASE.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="E:/myPrograms/MyEclipse Professional 2014/configuration/org.eclipse.osgi/bundles/106/1/.cp/data/3.1/dist/org.springframework.context.support-3.1.1.RELEASE.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="E:/myPrograms/MyEclipse Professional 2014/configuration/org.eclipse.osgi/bundles/106/1/.cp/data/3.1/dist/org.springframework.core-3.1.1.RELEASE.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="E:/myPrograms/MyEclipse Professional 2014/configuration/org.eclipse.osgi/bundles/106/1/.cp/data/3.1/dist/org.springframework.expression-3.1.1.RELEASE.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="E:/myPrograms/MyEclipse Professional 2014/configuration/org.eclipse.osgi/bundles/106/1/.cp/data/3.1/dist/org.springframework.instrument-3.1.1.RELEASE.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="E:/myPrograms/MyEclipse Professional 2014/configuration/org.eclipse.osgi/bundles/106/1/.cp/data/3.1/dist/org.springframework.instrument.tomcat-3.1.1.RELEASE.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="E:/myPrograms/MyEclipse Professional 2014/configuration/org.eclipse.osgi/bundles/106/1/.cp/data/3.1/deps/aopalliance-1.0.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="E:/myPrograms/MyEclipse Professional 2014/configuration/org.eclipse.osgi/bundles/106/1/.cp/data/3.1/deps/aspectjweaver-1.6.9.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="E:/myPrograms/MyEclipse Professional 2014/configuration/org.eclipse.osgi/bundles/106/1/.cp/data/3.1/deps/cglib-nodep-2.2.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="E:/myPrograms/MyEclipse Professional 2014/configuration/org.eclipse.osgi/bundles/106/1/.cp/data/3.1/deps/commons-pool-1.5.3.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="E:/myPrograms/MyEclipse Professional 2014/configuration/org.eclipse.osgi/bundles/106/1/.cp/data/3.1/deps/commons-collections-3.2.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="E:/myPrograms/MyEclipse Professional 2014/configuration/org.eclipse.osgi/bundles/106/1/.cp/data/3.1/deps/commons-logging-1.1.1.jar" todir="C:/Users/ku/Desktop/lib"/>
+        <copy file="E:/myPrograms/MyEclipse Professional 2014/configuration/org.eclipse.osgi/bundles/106/1/.cp/data/3.1/deps/log4j-1.2.16.jar" todir="C:/Users/ku/Desktop/lib"/>
+    </target>
+</project>

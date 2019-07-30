@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+
+<project name="MockDebugAssistant" default="pack">
+
+<!-- properies -->
+
+	<tstamp>
+		 	<format property="time" pattern="yyyyMMddHHmmss" />
+	</tstamp>
+	
+     <property name="src.dir" value="src" />
+
+     <property name="classes.dir" value="bin" />
+
+     <property name="lib.dir" value="lib" />
+
+     <property name="dist.dir" value="dist" />
+	
+     <property name="version" value="2.1.0" />
+	
+	 <property name="jarName" value="mda-${version}-${time}.jar"/>
+
+     <!-- 定义classpath -->
+     <path id="master-classpath">
+         <fileset file="${lib.dir}/*.jar" />
+         <pathelement path="${classes.dir}"/>
+     </path>
+	
+     <!-- 初始化任务 -->
+     <target name="init">
+     </target>
+     <!-- 编译 -->
+
+     <target name="compile" depends="init" description="compile the source files">
+         <mkdir dir="${classes.dir}"/>
+         <javac srcdir="${src.dir}" destdir="${classes.dir}" target="1.6">
+         	 <compilerarg line="-encoding gbk" />  
+             <classpath refid="master-classpath"/>
+         </javac>
+     </target>
+
+
+     <!-- 打包成jar -->
+     <target name="pack" depends="compile" description="make .jar file">
+      <mkdir dir="${dist.dir}" />
+         <jar destfile="${dist.dir}/${jarName}" basedir="${classes.dir}">
+             <exclude name="**/*test.*" />
+             <exclude name="**/test*.*" />
+         </jar>
+     </target>
+</project>
+
