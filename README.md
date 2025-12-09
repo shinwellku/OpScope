@@ -3,4 +3,8 @@
 <p>support SMI-S SAN Storage Brocade Switch and SNMP protocal device</p>
 针对运维和开发常用的SMI-S、SNMP、SSH、WMI等远程连接调试和模拟提供可视化的操作，为运维和开发提供更快捷方便的诊断工具使用，目前只实现了针对SAN网络的存储、光纤交换机的发现和查询功能，后续功能还会完善和增强。
 本软件所属权归 Shinwell Ku所有。
-![image](conf/MDA V1.0.0-Windows.PNG)
+##主界面
+![image](https://github.com/shinwell-ku/smartStorOps/blob/e4b303e5a866767acacbd6ff198d8fac30c623e5/conf/111.png)
+##示例
+![image](https://github.com/shinwell-ku/smartStorOps/blob/e4b303e5a866767acacbd6ff198d8fac30c623e5/conf/MDA%20V1.0.0-Windows.PNG)
+
