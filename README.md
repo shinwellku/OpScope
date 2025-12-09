@@ -1,2 +1,3 @@
 # 智能SAN存储交换机运维诊断工具
 <p>支持SMI-S  SNMP协议，通过配置能直接连接到SAN存储阵列、交换机。</p>
+<p>support SMI-S SAN Storage Brocade Switch and SNMP protocal device</p>
