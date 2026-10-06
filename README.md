@@ -82,7 +82,8 @@ ant -f build.xml
 默认 target 会依次执行 `compile`（`src` → `bin`）和 `pack`，产物为
 `dist/mda-2.1.0-<时间戳>.jar`。
 
-> 源码里有中文，`build.xml` 已指定 `-encoding gbk`，不要去掉这个参数。
+- 源码是 **UTF-8**（含 70 处中文字符串字面量），`build.xml` 已按此指定 `-encoding utf-8`，
+  这个参数不能去掉、也不能改回 `gbk` —— 否则中文全部乱码，甚至直接编译报错。
 
 > 仓库里另有一个 `build_all.xml`（Eclipse Runnable JAR Export 生成的）。
 > **它里面的路径是原构建机的绝对路径**（`D:/myWorkspace/...`、

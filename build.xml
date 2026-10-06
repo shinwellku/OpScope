@@ -34,7 +34,7 @@
      <target name="compile" depends="init" description="compile the source files">
          <mkdir dir="${classes.dir}"/>
          <javac srcdir="${src.dir}" destdir="${classes.dir}" target="1.6">
-         	 <compilerarg line="-encoding gbk" />  
+         	 <compilerarg line="-encoding utf-8" />  
              <classpath refid="master-classpath"/>
          </javac>
      </target>
