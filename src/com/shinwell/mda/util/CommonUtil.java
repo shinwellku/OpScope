@@ -230,7 +230,7 @@ public final class CommonUtil {
 		provider.setNamespace("root/ibm");
 		provider.setPort(5988);
 		provider.setProtocol("HTTP");
-		provider.setHost("10.20.66.15");
+		provider.setHost("192.168.1.104");
 		set.add(provider);
 		CommonUtil.writeObjectToFile("conf/smis.dat", set);
 

@@ -82,7 +82,7 @@ public class ArrayCimAPI {
 	public static void main(String[] args) {
 		CimAPI cimAPI = new CimAPI();
 		try {
-			cimAPI.getWbemClient("http", "10.20.32.124", "6988", "root/LsiArray13", "administrator", "P@ssw0rd");
+			cimAPI.getWbemClient("http", "192.168.1.104", "5988", "root/ibm", "administrator", "password");
 			ArrayCimAPI api = new ArrayCimAPI(cimAPI);
 			List<CIMInstance> systemList = api.queryComputerSystem();
 			for (CIMInstance cimInstance : systemList) {

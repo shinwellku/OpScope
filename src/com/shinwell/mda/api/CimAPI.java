@@ -321,7 +321,7 @@ public final class CimAPI {
 	public static void main(String[] args) {
 		try {
 			CimAPI api = new CimAPI();
-			api.getWbemClient("http", "10.20.66.15", "7988", "root/emc", "admin", "#1Password");
+			api.getWbemClient("http", "192.168.1.102", "5988", "root/emc", "admin", "password");
 //			List<CIMInstance> insts = api.enumerateInstances("CIM_ComputerSystem");
 //			for (CIMInstance cimInstance : insts) {
 //				System.out.println("名称:" + cimInstance.getPropertyValue("ElementName"));

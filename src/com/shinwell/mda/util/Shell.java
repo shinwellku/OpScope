@@ -31,7 +31,7 @@ public class Shell{
         //host=JOptionPane.showInputDialog("Enter username@hostname",
         //                                 System.getProperty("user.name")+
         //                                 "@localhost"); 
-        host=JOptionPane.showInputDialog("Enter username@hostname","root@10.10.100.2"); 
+        host=JOptionPane.showInputDialog("Enter username@hostname","root@192.168.1.100"); 
       }
       String user=host.substring(0, host.indexOf('@'));
       host=host.substring(host.indexOf('@')+1);
@@ -45,7 +45,7 @@ public class Shell{
     	  
         @Override
 		public String getPassword() {
-			return "Raysdata@2016";
+			return "password";
 		}
 
 		@Override
@@ -55,7 +55,7 @@ public class Shell{
         
 @Override
 		public String[] promptKeyboardInteractive(String destination, String name, String instruction, String[] prompt, boolean[] echo) {
-			return new String[]{"Raysdata@2016"};
+			return new String[]{"password"};
 		}
 
 //		public void showMessage(String message){

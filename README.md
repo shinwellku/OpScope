@@ -13,8 +13,8 @@
 当前版本重点实现了 SAN 网络中**存储阵列与光纤交换机**的发现、查询与性能监控，
 其余设备类型的支持在陆续补充。
 
-> 代码内部的包名、类名与构建产物仍沿用早期代号 **MDA**（`com.shinwell.mda`、
-> `MdaAppWindow`、`mda.jar`）—— 属于历史沿革，与对外名称无关。
+> 代码内部的类名与构建产物仍沿用早期代号 **MDA**（`MdaAppWindow`、`mda.jar`）——
+> 属于历史沿革，与对外名称无关。包名已统一为 `com.shinwell.mda`。
 
 ![主界面](conf/111.png)
 
@@ -110,8 +110,8 @@ jar cfe dist/mda.jar com.shinwell.mda.gui.MdaAppWindow -C bin .
 java -jar dist/mda.jar
 ```
 
-首次运行会缺少 `conf/ssh.dat`、`conf/wmi.dat`（代码里引用了但仓库中没有），
-程序会在你保存 SSH / WMI 配置时自动创建。
+首次运行时 `conf/` 下的四个设备列表文件（`smis.dat` / `snmp.dat` / `ssh.dat` /
+`wmi.dat`）都不存在，程序会在你保存配置时按需创建。
 
 ### 4. 用 Eclipse 打开
 
@@ -129,21 +129,20 @@ java -jar dist/mda.jar
 | `applicationContext.xml` | Spring 容器装配（引入 `-util.xml`，注册 `smisService`） |
 | `applicationContext-util.xml` | DMTF 设备类型对照表（`dedicatedMap`） |
 | `application.properties` | 全局属性占位符（`PropertyPlaceholderConfigurer`） |
-| `smis.dat` | SMI-S Provider 连接列表，序列化的 `HashSet<SmisProvider>` |
-| `snmp.dat` | SNMP 设备列表，序列化的 `HashSet<SnmpProvider>` |
+| `smis.dat` | SMI-S Provider 连接列表，序列化的 `HashSet<SmisProvider>`（**不入库**） |
+| `snmp.dat` | SNMP 设备列表，序列化的 `HashSet<SnmpProvider>`（**不入库**） |
 | `messages_zh_CN.properties` | 中文界面文案 |
 | `MDA-HELP.CHM` | 内置帮助文档 |
 
 `smis.dat` / `snmp.dat` 由界面上的「SMI-S 管理」「SNMP 管理」直接维护，
-不需要手工编辑。
+不需要手工编辑。它们和 `ssh.dat`、`wmi.dat` 一样属于**运行时数据，不入库**。
 
 设备类型对照表（`applicationContext-util.xml` 中的 `dedicatedMap`）覆盖
 DMTF 定义的 0–40、136–138 号类型，含 `Storage`、`FC Switch`、`NAS Head`、
 `Virtual Tape Library` 等。
 
-> ⚠️ **不要把你自己的真实设备地址和密码提交进仓库。**
-> `smis.dat` / `snmp.dat` 是二进制序列化文件，但其中的字符串（主机名、命名空间、
-> 密码）用 `strings` 就能直接读出来。提交前请先把它们换成占位数据。
+> ⚠️ **注意**：`*.dat` 是二进制序列化文件，但里面的字符串（主机名、命名空间、
+> 密码）用 `strings` 就能直接读出来。它们记录的是你自己的设备，**不要提交进仓库**。
 
 ## 项目结构
 

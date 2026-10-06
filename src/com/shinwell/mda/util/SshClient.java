@@ -123,7 +123,7 @@ public class SshClient implements Closeable {
 	}
 
 	public static SshClient newInstance() throws Exception {
-		String host = "10.10.0.16";
+		String host = "192.168.1.100";
 		Integer port = 22;
 		String user = "root";
 		String key = "./id_dsa";

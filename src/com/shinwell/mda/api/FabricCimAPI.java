@@ -124,7 +124,7 @@ public class FabricCimAPI {
 	public static void main(String[] args) {
 		CimAPI cimAPI = new CimAPI();
 		try {
-			cimAPI.getWbemClient("http", "10.20.66.15", "6988", "root/brocade1", "admin", "Raysdata@2016");
+			cimAPI.getWbemClient("http", "192.168.1.101", "5989", "root/brocade1", "admin", "password");
 			FabricCimAPI api = new FabricCimAPI(cimAPI);
 			List<CIMInstance> systemList = api.queryFabric();
 			for (CIMInstance cimInstance : systemList) {
