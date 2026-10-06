@@ -193,5 +193,7 @@ OpScope/
 
 ## 许可
 
-仓库当前未声明开源许可证。在补充 `LICENSE` 之前，默认保留所有权利，
-如需引用或分发请先与作者联系。
+[Apache License 2.0](LICENSE) © 2019-2026 Shinwell Ku
+
+`lib/` 目录下随仓库分发的第三方库**不适用本许可**，各自仍受其原始许可约束，
+详见 [NOTICE](NOTICE)。
