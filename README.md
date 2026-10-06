@@ -1,13 +1,20 @@
-# SmartOpSphere
+# OpScope
 
-**多协议存储与网络设备运维诊断工具**
+**多协议基础设施监控与诊断工具**
+
+> Scope —— 观测仪。接上一台设备，用 SMI-S / SNMP / SSH / WMI 四种协议看进去：
+> 既查得到它的静态配置，也看得到它的性能曲线随时间怎么走。
 
 面向 IaaS 层基础设施（SAN 存储阵列、光纤交换机、磁带库、服务器、网络设备等），
-通过远程直连提供设备发现、信息查询、性能监控与故障诊断。把过去散落在各厂商
-命令行工具里的排查动作，收敛到一个桌面应用里完成。
+通过远程直连（**无需在目标设备上安装 agent**）完成设备发现、信息查询、性能监控
+与故障诊断，并把结果用图表呈现。过去散落在各厂商命令行工具里的排查动作，收敛到
+一个桌面应用里完成。
 
-当前版本实现了 SAN 网络中**存储阵列与光纤交换机**的发现和查询，其余设备类型的
-支持在陆续补充。
+当前版本重点实现了 SAN 网络中**存储阵列与光纤交换机**的发现、查询与性能监控，
+其余设备类型的支持在陆续补充。
+
+> 代码内部的包名、类名与构建产物仍沿用早期代号 **MDA**（`com.shinwell.mda`、
+> `MdaAppWindow`、`mda.jar`）—— 属于历史沿革，与对外名称无关。
 
 ![主界面](conf/111.png)
 
@@ -60,8 +67,8 @@
 ### 1. 获取代码
 
 ```bash
-git clone https://github.com/shinwellku/smartOpSphere.git
-cd smartOpSphere
+git clone https://github.com/shinwellku/OpScope.git
+cd OpScope
 ```
 
 ### 2. 构建
@@ -140,7 +147,7 @@ DMTF 定义的 0–40、136–138 号类型，含 `Storage`、`FC Switch`、`NAS
 ## 项目结构
 
 ```
-smartOpSphere/
+OpScope/
 ├── src/com/shinwell/mda/
 │   ├── api/            CIM 客户端封装（Array / Fabric / Tape）
 │   ├── domain/         数据模型（SmisProvider、SnmpProvider、SwitchModel、SnmpTrap…）
